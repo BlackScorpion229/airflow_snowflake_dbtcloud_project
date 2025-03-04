@@ -1,9 +1,8 @@
 -- Combine telemetry data with machine features
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 WITH TelemetryFeatures AS (
     SELECT * FROM {{ref('stg_telemetry_features')}}
-  
 )
 
 -- Calculate average telemetry values per machine
