@@ -1,33 +1,47 @@
-
 version: 2
 
-models: 
+models:
   - name: stg_telemetry_features #1
     description: "Telemetry features staging area (It is made by combining Machine table and Telemetry table"
+    config:
+      schema: "silver_stage"
+      materrilized: "table"
     columns:
       - name: DATETIME
         description: "The primary key for this table"
 
   - name: stg_avg_telemetry #2
     description: "Containts the aggregated value of Telemetry data, uses the TelemetryFeatures views to create this view"
+    config:
+      schema: "silver_stage"
+      materrilized: "table"
     columns:
       - name: MACHINEID
         description: "The primary key for this table"
 
   - name: stg_error_data #3
     description: "Containts data from Error table"
+    config:
+      schema: "silver_stage"
+      materrilized: "table"
     columns:
       - name: DATETIME
         description: "The primary key for this table"
 
   - name: stg_maintenance_data #4
     description: "Containts data from maintenance table"
+    config:
+      schema: "silver_stage"
+      materrilized: "table"
     columns:
       - name: DATETIME
         description: "The primary key for this table"
 
   - name: stg_failure_data #5
     description: "Containts data from failure table"
+    config:
+      schema: "silver_stage"
+      materrilized: "table"
     columns:
       - name: DATETIME
         description: "The primary key for this table"
