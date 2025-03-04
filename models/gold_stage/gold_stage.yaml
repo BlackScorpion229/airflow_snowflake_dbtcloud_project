@@ -5,8 +5,8 @@ models:
   - name: ComprehensiveInsights # name of the sql file
     description: "Aggregated view of all the table to use in the dashboard"
     config:
-        schema: "final_table"
-        materrilized: "view"
+      schema: "gold_stage"
+      materrilized: "view"
     columns:
       - name: DATETIME
         description: "The primary key for this table"
