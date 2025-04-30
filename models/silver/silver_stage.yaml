@@ -4,7 +4,7 @@ models:
   - name: silver_telemetry_features
     description: "Telemetry features staging area (combined Machine and Telemetry tables)"
     config:
-      schema: "silver_stage"
+      schema: "silver"
       materialized: "table"
     columns:
       - name: DATETIME
@@ -13,7 +13,7 @@ models:
   - name: silver_avg_telemetry
     description: "Aggregated telemetry data using telemetry features"
     config:
-      schema: "silver_stage"
+      schema: "silver"
       materialized: "table"
     columns:
       - name: MACHINEID
@@ -22,7 +22,7 @@ models:
   - name: silver_error_data
     description: "Data from the Error table"
     config:
-      schema: "silver_stage"
+      schema: "silver"
       materialized: "table"
     columns:
       - name: DATETIME
@@ -31,7 +31,7 @@ models:
   - name: silver_maintenance_data
     description: "Data from the Maintenance table"
     config:
-      schema: "silver_stage"
+      schema: "silver"
       materialized: "table"
     columns:
       - name: DATETIME
@@ -40,7 +40,7 @@ models:
   - name: silver_failure_data
     description: "Data from the Failure table"
     config:
-      schema: "silver_stage"
+      schema: "silver"
       materialized: "table"
     columns:
       - name: DATETIME

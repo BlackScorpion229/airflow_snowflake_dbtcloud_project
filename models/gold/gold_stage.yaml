@@ -4,7 +4,7 @@ models:
   - name: ComprehensiveInsights
     description: "Aggregated view for dashboard reporting"
     config:
-      schema: "gold_stage"
+      schema: "gold"
       materialized: "view"
     columns:
       - name: DATETIME
