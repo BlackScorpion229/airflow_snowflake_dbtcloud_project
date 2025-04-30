@@ -5,7 +5,6 @@ with ErrorData AS (
         e.MACHINEID,
         e.ERRORID
     FROM
-        KNK_DB.raw_schema.PDM_ERRORS e
+        {{ ref("bronze_pdm_errors") }} e
 )
-
 SELECT * from ErrorData

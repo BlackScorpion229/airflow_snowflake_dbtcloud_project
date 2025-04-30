@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: "Data_Engineering"
+    database: KNK_DB
+    schema: RAW_SCHEMA
+   
+    tables:
+      - name: PDM_TELEMETRY
+      - name: PDM_MACHINES
+      - name: PDM_ERRORS
+      - name: PDM_MAINT
+      - name: PDM_FAILURES

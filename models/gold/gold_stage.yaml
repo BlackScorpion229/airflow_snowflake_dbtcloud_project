@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: ComprehensiveInsights
+    description: "Aggregated view for dashboard reporting"
+    config:
+      schema: "gold_stage"
+      materialized: "view"
+    columns:
+      - name: DATETIME
+        description: "The primary key for this table"
+        tests:
+          - not_null

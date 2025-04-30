@@ -2,27 +2,27 @@
 {{ config(materialized='view') }}
 
 WITH TelemetryFeatures AS (
-    SELECT * FROM {{ref('stg_telemetry_features')}}
+    SELECT * FROM {{ref('silver_telemetry_features')}}
 )
 
 -- Calculate average telemetry values per machine
 , AvgTelemetry AS (
-    SELECT * FROM {{ref('stg_avg_telemetry')}}
+    SELECT * FROM {{ref('silver_avg_telemetry')}}
 )
 
 -- Combine with error data
 , ErrorData AS (
-    SELECT * FROM {{ref('stg_error_data')}}
+    SELECT * FROM {{ref('silver_error_data')}}
 )
 
 -- Combine with maintenance data
 , MaintenanceData AS (
-    SELECT * FROM {{ref('stg_maintenance_data')}}
+    SELECT * FROM {{ref('silver_maintenance_data')}}
 )
 
 -- Combine with failure data
 , FailureData AS (
-    SELECT * FROM {{ref('stg_failure_data')}}
+    SELECT * FROM {{ref('silver_failure_data')}}
 ),
 
 -- Combine all data for comprehensive insights

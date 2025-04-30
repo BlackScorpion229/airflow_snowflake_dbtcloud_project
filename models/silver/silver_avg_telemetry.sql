@@ -1,4 +1,3 @@
--- Calculate average telemetry values per machine
 WITH TelemetryFeatures AS (
     SELECT
         t.DATETIME,
@@ -10,11 +9,10 @@ WITH TelemetryFeatures AS (
         m.MODEL,
         m.AGE
     FROM
-        KNK_DB.raw_schema.PDM_TELEMETRY t
-    JOIN KNK_DB.raw_schema.PDM_MACHINES m ON t.MACHINEID = m.MACHINEID
-)
-
-, AvgTelemetry AS (
+        {{ ref("bronze_pdm_telemetry") }} t
+    JOIN {{ ref("bronze_pdm_machines") }} m ON t.MACHINEID = m.MACHINEID
+),
+AvgTelemetry AS (
     SELECT
         MACHINEID,
         AVG(VOLT) AS AVG_VOLT,
@@ -26,5 +24,4 @@ WITH TelemetryFeatures AS (
     GROUP BY
         MACHINEID
 )
-
-select * from AvgTelemetry
+SELECT * FROM AvgTelemetry

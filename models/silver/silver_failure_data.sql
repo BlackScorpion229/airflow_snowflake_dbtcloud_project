@@ -5,7 +5,6 @@ with FailureData AS (
         f.MACHINEID,
         f.FAILURE
     FROM
-        KNK_DB.raw_schema.PDM_FAILURES f
+        {{ ref("bronze_pdm_failures") }} f
 )
-
 select * from FailureData

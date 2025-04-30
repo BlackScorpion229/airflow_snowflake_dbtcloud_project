@@ -10,8 +10,8 @@ WITH TelemetryFeatures AS (
         m.MODEL,
         m.AGE
     FROM
-        KNK_DB.raw_schema.PDM_TELEMETRY t
-    JOIN KNK_DB.raw_schema.PDM_MACHINES m ON t.MACHINEID = m.MACHINEID
+        {{ ref("bronze_pdm_telemetry") }} t
+    JOIN {{ ref("bronze_pdm_machines") }} m ON t.MACHINEID = m.MACHINEID
 )
 
 select * from TelemetryFeatures
