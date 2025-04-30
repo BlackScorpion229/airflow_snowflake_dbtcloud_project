@@ -5,7 +5,6 @@ with MaintenanceData AS (
         m.MACHINEID,
         m.COMP
     FROM
-        KNK_DB.raw_schema.PDM_MAINT m
+        {{ ref("bronze_pdm_maint") }} m
 )
-
 select * from MaintenanceData
