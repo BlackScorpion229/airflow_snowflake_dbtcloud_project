@@ -1,0 +1,21 @@
+sale_id,customer_id,product_id,sale_date,quantity,unit_price,discount,shipping_cost,tax_rate,payment_method,shipping_address,customer_name,customer_email,customer_phone,product_name,product_category,product_brand,warehouse_id,warehouse_location,sales_rep_id,sales_rep_name,order_status,return_status,promotion_code,review_rating,review_comment,customer_loyalty_points,time_of_sale,sale_month,sale_year
+1,3153,276,2023-09-20,1,469.43,0.0,40.18,0.0553,Credit Card,"PSC 0190, Box 3784
+APO AA 79098",Isaac Mullins,michael00@example.com,707-807-9736,Camera Apparel,Clothing,Nelson Group,1,Los Angeles,25,Laurie Hernandez,Delivered,Not Returned,,5.0,,19,12:22:32,9,2023
+2,1654,175,2023-12-28,1,225.72,0.0,11.41,0.0502,Debit Card,"3610 Erin Prairie Suite 795
+South Edwardburgh, FM 76430",Dustin Sellers,patrickdaugherty@example.com,957.711.3872x0627,Though Gadget,Clothing,Peters-Montgomery,2,Los Angeles,28,Monica Brown,Shipped,Not Returned,,,Represent chair material sound.,59,23:50:26,12,2023
+3,2998,121,2024-04-24,3,180.27,0.0,46.69,0.069,PayPal,"USNV Wolf
+FPO AE 12487",Joy James,mary19@example.com,6112062936,Bank Tool,Clothing,Hill and Sons,1,Los Angeles,32,Maria Smith DVM,Delivered,Not Returned,,,,733,10:35:44,4,2024
+4,4549,136,2023-08-29,4,491.82,0.12,8.25,0.0584,Credit Card,"82701 Nicholas Fields
+Willisborough, NM 47170",Brent Miller,philiptaylor@example.com,(600)653-6411x66059,Analysis Gadget,Clothing,Reed-Garza,3,Houston,30,Katherine Wilkinson,Shipped,Not Returned,,,Pattern research between bag speak.,100,11:25:50,8,2023
+5,2295,293,2024-07-03,1,384.11,0.0,34.31,0.1113,Credit Card,"56704 Brett Turnpike Suite 514
+Miguelburgh, IN 91415",Eric Clark,angela59@example.org,314-968-7157x749,Positive Gadget,Electronics,Ramos-Oliver,1,Phoenix,40,Danielle Frank,Delivered,Not Returned,,,,96,10:58:37,7,2024
+6,1925,188,2025-01-01,5,375.25,0.0,16.21,0.068,Bank Transfer,"778 Blake Islands
+Franciscoville, UT 20570",Michael Richards,iswanson@example.net,577-812-4227,Month Apparel,Office Supplies,"Reid, Stokes and Buck",5,New York,37,Jennifer Berger,Pending,Not Returned,,,Wrong fish claim decision important interest.,586,13:48:30,1,2025
+7,2914,293,2024-11-27,6,260.17,0.11,38.69,0.0736,Credit Card,"3601 Stevens Lights
+Avilaborough, MH 37544",Maria Velazquez,anthony45@example.com,4643940592,Population Supply,Electronics,"James, Galvan and Shea",4,Houston,27,Melissa Velez,Cancelled,Not Returned,,2.0,,554,07:13:43,11,2024
+8,3833,139,2023-08-11,5,119.35,0.0,30.37,0.08,PayPal,"646 Shelton Avenue Apt. 347
+Mcconnellborough, TN 63734",Gregory Skinner,benjamin93@example.net,650.374.2633x8446,Sort Tool,Electronics,Mendoza Inc,1,New York,38,Emily Patterson,Cancelled,Not Returned,,,,98,06:06:13,8,2023
+9,2064,283,2023-06-15,2,27.9,0.0,41.55,0.1109,Bank Transfer,"213 Mikayla Motorway Suite 694
+Lake Nathanberg, NE 31977",Todd Gray,robinharris@example.net,+1-882-743-1977x3329,Despite Gadget,Clothing,Mitchell Inc,1,Houston,35,Sarah Smith,Cancelled,Not Returned,,5.0,Which themselves across sing personal institution while.,546,22:49:39,6,2023
+10,4494,168,2024-09-22,5,20.17,0.13,28.18,0.0673,Debit Card,"5548 Ortiz Lane Apt. 450
+West Linda, ME 56428",Christopher Walters,kirkcody@example.com,001-813-363-2956x30606,Left Gadget,Electronics,Jackson-Baker,4,Los Angeles,43,Sara Bass,Pending,Not Returned,,,,576,08:05:34,9,2024
