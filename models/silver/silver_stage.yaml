@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: silver_sales_data
+    description: "Data from the Sales table"
+    config:
+      schema: "silver"
+      materialized: "table"
+    # columns:
+    #   - name: DATETIME
+    #     description: "The primary key for this table"

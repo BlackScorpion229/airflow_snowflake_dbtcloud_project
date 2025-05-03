@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: "Bronze_Module"
+    database: KNK_DB
+    schema: RAW_SCHEMA
+   
+    tables:
+      - name: SALES_DATA
