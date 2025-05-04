@@ -11,3 +11,46 @@ models:
     #     description: "The primary key for this table"
     #     tests:
     #       - not_null
+
+  - name: gold_sales_enriched
+    description: "Fully enriched sales fact table joined with all dimension tables."
+    config:
+      schema: "gold"
+      materialized: "view"
+    columns:
+      - name: sale_id
+        tests: [not_null, unique]
+      - name: sale_date
+      - name: time_of_sale
+      - name: sale_month
+      - name: sale_year
+
+      - name: customer_id
+      - name: customer_name
+      - name: customer_email
+      - name: customer_phone
+      - name: shipping_address
+
+      - name: product_id
+      - name: product_name
+      - name: product_category
+      - name: product_brand
+
+      - name: warehouse_id
+      - name: warehouse_location
+
+      - name: sales_rep_id
+      - name: sales_rep_name
+
+      - name: quantity
+      - name: unit_price
+      - name: discount
+      - name: shipping_cost
+      - name: tax_rate
+      - name: payment_method
+      - name: order_status
+      - name: return_status
+      - name: promotion_code
+      - name: review_rating
+      - name: review_comment
+      - name: customer_loyalty_points
