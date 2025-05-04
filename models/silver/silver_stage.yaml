@@ -9,3 +9,68 @@ models:
     # columns:
     #   - name: DATETIME
     #     description: "The primary key for this table"
+
+  - name: silver_customer
+    description: "Customer dimension extracted from bronze_sales_data."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer."
+        tests: [not_null, unique]
+      - name: customer_name
+      - name: customer_email
+      - name: customer_phone
+      - name: shipping_address
+
+  - name: silver_product
+    description: "Product dimension extracted from bronze_sales_data."
+    columns:
+      - name: product_id
+        description: "Unique identifier for the product."
+        tests: [not_null, unique]
+      - name: product_name
+      - name: product_category
+      - name: product_brand
+
+  - name: silver_warehouse
+    description: "Warehouse dimension extracted from bronze_sales_data."
+    columns:
+      - name: warehouse_id
+        description: "Unique identifier for the warehouse."
+        tests: [not_null, unique]
+      - name: warehouse_location
+
+  - name: silver_sales_rep
+    description: "Sales representative dimension extracted from bronze_sales_data."
+    columns:
+      - name: sales_rep_id
+        description: "Unique identifier for the sales rep."
+        tests: [not_null, unique]
+      - name: sales_rep_name
+
+  - name: silver_sale
+    description: "Transactional fact table of sales from bronze_sales_data."
+    columns:
+      - name: sale_id
+        tests: [not_null, unique]
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('silver_customer')
+              field: customer_id
+      - name: product_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('silver_product')
+              field: product_id
+      - name: warehouse_id
+        tests:
+          - relationships:
+              to: ref('silver_warehouse')
+              field: warehouse_id
+      - name: sales_rep_id
+        tests:
+          - relationships:
+              to: ref('silver_sales_rep')
+              field: sales_rep_id
