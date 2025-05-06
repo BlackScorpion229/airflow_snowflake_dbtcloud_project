@@ -4,6 +4,9 @@ sources:
   - name: "Bronze_Module"
     database: KNK_DB
     schema: RAW_SCHEMA
-   
+
     tables:
-      - name: SALES_DATA
+    - name: SALES_DATA
+      tests:
+        - dbt_utils.unique_combination_of_columns:
+            combination_of_columns: ["ID", "SALE_DATE"]

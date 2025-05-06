@@ -1,5 +1,9 @@
-{{ config(materialized='view') }}
+{{ config(
+    materialized = 'view',
+    tags = ['sales_analytics', 'silver_layer']
+) }}
 
+-- CTEs to modularize source references
 WITH sale AS (
     SELECT * FROM {{ ref('silver_sale') }}
 ),
@@ -20,31 +24,33 @@ sales_rep AS (
     SELECT * FROM {{ ref('silver_sales_rep') }}
 )
 
+-- Final enriched sales dataset
 SELECT
+    -- Sale Details
     sale.sale_id,
     sale.sale_date,
     sale.time_of_sale,
     sale.sale_month,
     sale.sale_year,
 
-    -- Customer details
+    -- Customer Details
     sale.customer_id,
     customer.customer_name,
     customer.customer_email,
     customer.customer_phone,
     customer.shipping_address,
 
-    -- Product details
+    -- Product Details
     sale.product_id,
     product.product_name,
     product.product_category,
     product.product_brand,
 
-    -- Warehouse details
+    -- Warehouse Details
     sale.warehouse_id,
     warehouse.warehouse_location,
 
-    -- Sales Rep details
+    -- Sales Representative Details
     sale.sales_rep_id,
     sales_rep.sales_rep_name,
 
