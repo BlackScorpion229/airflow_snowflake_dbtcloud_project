@@ -1,9 +1,9 @@
-with Sales_data AS (
+with silver_sales_data AS (
     SELECT
-        s.sale_id,
-        s.customer_id,
-        s.sale_date
+        'sale_id',
+        'customer_id',
+        'sale_date'
     FROM
-        {{ ref("bronze_sales_data") }} s
+        {{ ref("bronze_sales_data") }}
 )
-SELECT * from Sales_data 
+SELECT * from silver_sales_data

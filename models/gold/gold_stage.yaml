@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: ComprehensiveInsights
+  - name: comprehensiveInsights
     description: "Aggregated view for dashboard reporting"
     config:
       schema: "gold"
